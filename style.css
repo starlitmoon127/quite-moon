@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  //background: #fde2e4;
+  background: #edb4c0 ;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #000000;
+  max-width: 650px;
+  line-height: 1.9;
+  background: #fde2e4;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* STORY SECTION */
+.story {
+  padding: 90px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.story-card {
+  background: #fde2e4;
+  max-width: 720px;
+  padding: 45px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.story-card h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  color: #e63946;
+  margin-bottom: 25px;
+}
+
+.story-card p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.9;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 34px;
+  background: #e63946;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+}
+
+.btn:hover {
+  background: #d62839;
+  transform: scale(1.05);
+}
+
+
+/* MEMORIES SECTION */
+.memories {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.memories h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.memories-sub {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.memory-card {
+  background: #fde2e4;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-6px);
+}
+
+.memory-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.memory-card p {
+  padding: 15px;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+
+/* LETTER PAGE */
+.letter {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.letter h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.8rem;
+  color: #e63946;
+  margin-bottom: 30px;
+}
+
+.letter-box {
+  max-width: 720px;
+  margin: auto;
+  background: #fde2e4;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+.question {
+  margin-top: 60px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.6rem;
+  color: #e63946;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  padding: 14px 35px;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+.yes {
+  background: #e63946;
+  color: white;
+}
+
+.no {
+  background: #ffd6d9;
+  color: #000000;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content {
+  background: #fff0f3;
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  font-size: 1.1rem;
+}
+
+.popup-content::before {
+  content: "❤️";
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e63946;
+}
+
+/* HEARTBEAT ANIMATION */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.heartbeat {
+  animation: heartbeat 10s ease-in-out infinite;
+}
+
+/* Extra glow for YES popup */
+.popup-content.yes-popup {
+  box-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
+}
+
+/* FALLING ROSES */
+.rose {
+  position: fixed;
+  top: -5%;
+  font-size: 2rem;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 10001;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/*FIRST CHAT*/
+.first-chat {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.first-chat h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #e63946;
+  margin-bottom: 50px;
+}
+
+.chat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.chat-text {
+  font-size: 1.1rem;
+  color: #000000;
+  max-width: 650px;
+  line-height: 1.9;
+  //background: white;
+  background: #fde2e4;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.chat-icon {
+  margin-bottom: 20px;
+}
+
+.chat-icon img {
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+/* SMALL NOTE */
+.chat-note {
+  font-size: 1rem;
+  color: #000000;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/*WHY I LOVE YOU*/
+.why-love {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.why-love h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #e63946;
+  margin-bottom: 40px;
+}
+
+.love-list {
+  list-style: none;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+  line-height: 2;
+  text-align: left;
+  padding-left: 0;
+}
+
+.love-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+.love-list li::before {
+  content: "❤️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}

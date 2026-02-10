@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Private 💖</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #edb4c0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .lock-box {
+      background: #fde2e4;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 300px;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #e63946;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .hint {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="lock-box">
+  <h2>🔒 Private Love Space</h2>
+  <input type="password" id="password" placeholder="Enter password 💕">
+  <button onclick="checkPassword()">Unlock my heart 😚</button>
+  <div class="hint">Hint: 💋 A date my heart will never forget</div>
+  <div class="error" id="error"></div>
+</div>
+
+<script>
+  function checkPassword() {
+    const correctPassword = "25012025"; // CHANGE PASSWORD HERE
+    const userPassword = document.getElementById("password").value;
+
+    if (userPassword === correctPassword) {
+      window.location.href = "home.html"; // your real page
+    } else {
+      document.getElementById("error").innerText = "Wrong password 😢";
+    }
+  }
+</script>
+
+</body>
+</html>
